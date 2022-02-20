@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { createCanvas, loadImage } = require("canvas");
 const fs = require("fs");
 const canvas = createCanvas(780, 800, "pdf");
@@ -198,7 +200,14 @@ function initCanvas() {
 		ctx.drawImage(image, 10, 10, 780, 800);
 		ctx.font = "15px Arial";
 		const path = process.argv[2]
-		const file = fs.readFileSync(path).toString();
+        let file;
+        try {
+            file = fs.readFileSync(path).toString();
+        } catch {
+            console.log("Path does not exist.")
+            return
+        }
+
 		const matches = file.matchAll(
 			/coop:button\((LJoystick|LBumper|RJoystick|RBumper|LTrigger|RTrigger|DPadUp|DPadDown|DPadLeft|DPadRight|B|A|X|Y),([^,\n]+),(pilot|copilot)\)/g
 		);
