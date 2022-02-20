@@ -204,6 +204,7 @@ function initCanvas() {
         try {
             file = fs.readFileSync(path).toString();
         } catch {
+            console.log("Usage: npx package /path/to/file")
             console.log("Path does not exist.")
             return
         }
