@@ -1,5 +1,7 @@
 # COOP
 
+[![npm](https://img.shields.io/npm/v/chickencoop?style=for-the-badge)](https://www.npmjs.com/package/chickencoop)
+
 Controller Operational Observation Program
 
 ---
