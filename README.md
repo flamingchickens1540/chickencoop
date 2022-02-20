@@ -7,10 +7,13 @@ COOP is a JavaScript program that lets you generate a button binding reference s
 
 ## Usage
 
-To run this script, use npx
+```
+npx chickencoop -i /path/to/input -o /path/to/output
 
-```sh
-npx chickencoop /path/to/input/file
+Options:
+      --help     Show help                                             [boolean]
+  -i, --input    The file to read from                       [string] [required]
+  -o, --output   The file to write to                        [string] [required]
 ```
 
 ## Syntax
@@ -48,6 +51,18 @@ This is the button's identifier, can be any of the following:
 
 This will be the label text for the button. It can have spaces, but no commas or newlines
 
-#### Controller
+### Controller
 
 Can be either `pilot` or `copilot`. `pilot` is the top controller in the diagram and `copilot` is the bottom one.
+
+## Example
+
+```java
+// coop:button(LBumper,Run the CoolCommand,pilot)
+new JoystickButton(pilotController, Button.kLeftBumper.value)
+        .whenHeld(new CoolCommand());
+
+// coop:button(DPadUp,Run the CoolerCommand,copilot)
+new POVButton(copilotController, 0)
+        .whenPressed(new CoolerCommand());
+```
