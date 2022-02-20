@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "canvas": "^2.9.0"
+    "canvas": "^2.9.0",
+    "yargs": "^17.3.1"
   },
   "bin": "./script.js",
   "keywords": [

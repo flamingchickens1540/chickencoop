@@ -5,6 +5,31 @@ const fs = require("fs");
 const canvas = createCanvas(780, 800, "pdf");
 const ctx = canvas.getContext("2d");
 
+const yargs = require('yargs');
+
+const argv = yargs
+                .scriptName("npx chickencoop")
+                .usage('$0 -i /path/to/input -o /path/to/output.pdf')
+                .option('input', {
+                    alias : 'i',
+                    describe: 'The file to read from',
+                    type: 'string', /* array | boolean | string */
+                    nargs: 1,
+                    demand: true
+                })
+                .option('output', {
+                    alias : 'o',
+                    describe: 'The file to write to',
+                    type: 'string', /* array | boolean | string */
+                    nargs: 1,
+                    demand: true
+                })
+                .example("$0 -i input.txt -o output.pdf")
+                .showHelpOnFail(false, "Specify --help for available options")
+
+                .argv
+
+
 locations = {
 	//"Location": [[[X, Y]...], "textAlign", "textColor", [labelStartOffsetX, labelStartOffsetY]],
 
@@ -199,12 +224,10 @@ function initCanvas() {
 	loadImage("./background.png").then((image) => {
 		ctx.drawImage(image, 10, 10, 780, 800);
 		ctx.font = "15px Arial";
-		const path = process.argv[2]
         let file;
         try {
-            file = fs.readFileSync(path).toString();
+            file = fs.readFileSync(argv.input).toString();
         } catch {
-            console.log("Usage: npx package /path/to/file")
             console.log("Path does not exist.")
             return
         }
@@ -221,7 +244,7 @@ function initCanvas() {
 
 
 function exportPDF() {
-	fs.writeFileSync("COOP.pdf", canvas.toBuffer());
+	fs.writeFileSync(argv.output, canvas.toBuffer());
 }
 
 initCanvas();
