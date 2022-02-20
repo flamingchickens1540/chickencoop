@@ -1,14 +1,14 @@
 {
-  "name": "coop",
+  "name": "chickencoop",
   "version": "1.0.0",
   "description": "Controller Operational Observation Program",
-  "repository": "git://github.com/flamingchickens1540/coop.git",
+  "repository": "git://github.com/flamingchickens1540/chickencoop.git",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "canvas": "^2.9.0",
     "yargs": "^17.3.1"
