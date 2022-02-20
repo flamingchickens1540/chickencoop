@@ -222,7 +222,7 @@ function addButton(locationName, text, pilot) {
 
 function initCanvas() {
 	loadImage(require('path').join(__dirname,"background.png")).then((image) => {
-		ctx.drawImage(image, 0, 0, 780, 800);
+		ctx.drawImage(image, 10, 10, 780, 800);
 		ctx.font = "15px Arial";
         let file;
         try {

@@ -1,6 +1,6 @@
 {
   "name": "chickencoop",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Controller Operational Observation Program",
   "repository": "git://github.com/flamingchickens1540/chickencoop.git",
   "main": "script.js",
