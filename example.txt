@@ -12,3 +12,5 @@ coop:button(DPadRight,Set lights to rainbow,copilot)
 
 coop:button(RBumper,Start music,copilot)
 coop:button(RTrigger,Stop music,copilot)
+
+coop:button(RJoystick,Swivel Camera,copilot)
