@@ -13,6 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
+      - run: npm run build
       - run: npx chickencoop -i example.txt -o example.pdf
       - uses: EndBug/add-and-commit@v8
         with:

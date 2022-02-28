@@ -59,21 +59,4 @@ Can be either `pilot` or `copilot`. `pilot` is the top controller in the diagram
 
 ## Example
 
-```txt
-coop:button(LJoystick,Turn,pilot)
-coop:button(LBumper,Run the CoolCommand,pilot)
-coop:button(Y,Initiate Magic Flight,pilot)
-coop:button(X,Initiate Less Magic Flight,pilot)
-coop:button(B,Initiate Normal Flight,pilot)
-coop:button(A,Cancel Flight,pilot)
-
-coop:button(DPadUp,Run the CoolerCommand,copilot)
-coop:button(DPadDown,Cancel the CoolerCommand,copilot)
-coop:button(DPadLeft,Set lights to disco,copilot)
-coop:button(DPadRight,Set lights to rainbow,copilot)
-
-coop:button(RBumper,Start music,copilot)
-coop:button(RTrigger,Stop music,copilot)
-```
-
-![Example image](example.jpg)
+See https://github.com/flamingchickens1540/chickencoop/blob/main/example.pdf and https://github.com/flamingchickens1540/chickencoop/blob/main/example.txt
