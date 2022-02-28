@@ -30,7 +30,6 @@ const argv = yargs
                 })
                 .example("$0 -i input.txt -o output.pdf")
                 .showHelpOnFail(false, "Specify --help for available options")
-
                 .argv
 
 class Point {
@@ -144,16 +143,14 @@ class Button {
 }
 
 let locations = {
-	//"Location": [[[X, Y]...], "textAlign", "textColor", [labelStartOffsetX, labelStartOffsetY]],
+	LJoystick: new Button("LJoy", [[280, 120]], "left", "black", 230, [10, 120]),
+	RJoystick: new Button("RJoy", [[500, 230],[463, 195]], "right", "black", 250, [770,230]),
 
-	LJoystick: new Button("Left Joystick", [[280, 120]], "left","black", 230, [10, 120]),
-	RJoystick: new Button("Right Joystick", [[500, 230],[463, 195]], "right", "black", 250, [770,230]),
+	LBumper: new Button("LB", [[270, 65]], "left", "black", 240, [10, 65]),
+	RBumper: new Button("RB", [[530, 65],[530, 67]], "right", "black", 230, [770, 65]),
 
-	LBumper: new Button("Left Bumper", [[270, 50],[270, 65]], "left", "black", 250, [10, 50]),
-	RBumper: new Button("Right Bumper", [[530, 50],[530, 67]], "right", "black", 230, [770, 50]),
-
-	LTrigger: new Button("Left Trigger", [[280, 20], [280, 62]], "left", "black", 250, [10,20]),
-	RTrigger: new Button("Right Trigger", [[520, 20], [520, 65]], "right", "black", 240, [770,20]),
+	LTrigger: new Button("LT", [[280, 40], [280, 62]], "left", "black", 250, [10,40]),
+	RTrigger: new Button("RT", [[520, 40], [520, 65]], "right", "black", 240, [770,40]),
 
 	A: new Button("A", [[539, 160]], "right", "#7b8e4a", 190, [770, 160]),
 	B: new Button("B", [[568, 130]], "right", "#ca452f", 190, [770, 130]),
@@ -164,6 +161,9 @@ let locations = {
 	DPadDown: new Button("DPad Down", [[340,220]], "left", "black", 270, [10,220]),
 	DPadLeft: new Button("DPad Left", [[315, 195]], "left", "black", 270, [10,195]),
 	DPadRight: new Button("DPad Right", [[365, 245],[365, 195]], "left", "black", 270, [10,245]),
+
+	Back: new Button("Back", [[360, 15],[360, 122]], "left", "black", 330, [10, 15]),
+	Start: new Button("Start", [[447, 15],[447, 122]], "right", "black", 300, [770, 15]),
 };
 
 class CoopMatch {
@@ -200,7 +200,7 @@ function initCanvas() {
 			process.exit(1)
         }
 		const matches = file.matchAll(
-			/coop:button\((LJoystick|LBumper|RJoystick|RBumper|LTrigger|RTrigger|DPadUp|DPadDown|DPadLeft|DPadRight|B|A|X|Y),([^,\n]+),(pilot|copilot)\)/g
+			/coop:button\(([^,\n]+),([^,\n]+),(pilot|copilot)\)/g
 		);
 		for (let match of matches) {
 			new CoopMatch(match).draw()
