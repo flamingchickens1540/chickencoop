@@ -3,22 +3,30 @@
   "version": "1.0.3",
   "description": "Controller Operational Observation Program",
   "repository": "git://github.com/flamingchickens1540/chickencoop.git",
-  "main": "script.js",
+  "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tsc && cp ./assets/* ./build/assets"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "canvas": "^2.9.0",
+    "colors": "^1.4.0",
     "yargs": "^17.3.1"
   },
-  "bin": "./script.js",
+  "bin": "./build/index.js",
   "keywords": [
     "xbox",
     "controller",
     "xbox mapping",
     "controller mapping",
     "button mapping"
-  ]
+  ],
+  "include": [
+    "build/**/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "typescript": "^4.5.5"
+  }
 }

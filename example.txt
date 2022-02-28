@@ -1,17 +1,31 @@
 coop:button(LJoystick,Turn,pilot)
+coop:button(RJoystick,Drive,pilot)
+
 coop:button(LBumper,Run the CoolCommand,pilot)
+coop:button(RBumper,Stop the CoolCommand,pilot)
+
+coop:button(LTrigger,Raise arm,pilot)
+coop:button(RTrigger,Lower arm,pilot)
+
 coop:button(Y,Initiate Magic Flight,pilot)
 coop:button(X,Initiate Less Magic Flight,pilot)
 coop:button(B,Initiate Normal Flight,pilot)
 coop:button(A,Cancel Flight,pilot)
 
-coop:button(DPadUp,Run the CoolerCommand,copilot)
-coop:button(DPadDown,Cancel the CoolerCommand,copilot)
-coop:button(DPadLeft,Set lights to disco,copilot)
-coop:button(DPadRight,Set lights to rainbow,copilot)
-
-coop:button(RBumper,Start music,copilot)
-coop:button(LBumper,Stop music,copilot)
-coop:button(RTrigger,Adjust volume,copilot)
-
-coop:button(RJoystick,Swivel camera,copilot)
+coop:button(DPadUp,Very very very very very very very very very very very very very very long,pilot)
+coop:button(DPadDown,Very very very very very very very very very very very very very very long,pilot)
+coop:button(DPadLeft,Very very very very very very very very very very very very very very long,pilot)
+coop:button(DPadRight,Very very very very very very very very very very very very very very long,pilot)
+/
+/
+/
+coop/:button(DPadUp,Run the CoolerCommand,copilot)
+coop/:button(DPadDown,Cancel the CoolerCommand,copilot)
+coop/:button(DPadLeft,Set lights to disco,copilot)
+coop/:button(DPadRight,Set lights to rainbow,copilot)
+/
+coop/:button(RBumper,Start music,copilot)
+coop/:button(LBumper,Stop music,copilot)
+coop/:button(RTrigger,Adjust volume,copilot)
+/
+coop/:button(RJoystick,Swivel camera,copilot)
