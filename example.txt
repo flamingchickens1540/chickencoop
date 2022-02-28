@@ -1,31 +1,37 @@
-coop:button(LJoystick,Turn,pilot)
-coop:button(RJoystick,Drive,pilot)
+coop:button(LJoystick,facilisi cras fermentum,pilot)
+coop:button(RJoystick,metus aliquam eleifend,pilot)
 
-coop:button(LBumper,Run the CoolCommand,pilot)
-coop:button(RBumper,Stop the CoolCommand,pilot)
+coop:button(LBumper,quam quisque id,pilot)
+coop:button(RBumper,pellentesque id nibh,pilot)
 
-coop:button(LTrigger,Raise arm,pilot)
-coop:button(RTrigger,Lower arm,pilot)
+coop:button(LTrigger,ipsum consequat nisl,pilot)
+coop:button(RTrigger,in est ante,pilot)
 
-coop:button(Y,Initiate Magic Flight,pilot)
-coop:button(X,Initiate Less Magic Flight,pilot)
-coop:button(B,Initiate Normal Flight,pilot)
-coop:button(A,Cancel Flight,pilot)
+coop:button(Y,tellus id interdum,pilot)
+coop:button(X,convallis tellus id,pilot)
+coop:button(B,vitae justo eget,pilot)
+coop:button(A,id neque aliquam,pilot)
 
-coop:button(DPadUp,Look Forward,pilot)
-coop:button(DPadDown,Look Back,pilot)
-coop:button(DPadLeft,Look Left,pilot)
-coop:button(DPadRight,Look Right,pilot)
+coop:button(DPadUp,risus quis varius,pilot)
+coop:button(DPadDown,elit eget gravida,pilot)
+coop:button(DPadLeft,aenean euismod elementum,pilot)
+coop:button(DPadRight,in pellentesque massa,pilot)
+
+coop:button(Start,lorum ipsum dolor,pilot)
+coop:button(Back,consectetur adipiscing elit,pilot)
 
 
 
-coop:button(DPadUp,Run the CoolerCommand,copilot)
-coop:button(DPadDown,Cancel the CoolerCommand,copilot)
-coop:button(DPadLeft,Set lights to disco,copilot)
-coop:button(DPadRight,Set lights to rainbow,copilot)
 
-coop:button(RBumper,Start music,copilot)
-coop:button(LBumper,Stop music,copilot)
-coop:button(RTrigger,Adjust volume,copilot)
+coop:button(DPadUp,non odio euismod,copilot)
+coop:button(DPadDown,pellentesque habitant morbi,copilot)
+coop:button(DPadRight,tempus egestas sed,copilot)
 
-coop:button(RJoystick,Swivel camera,copilot)
+coop:button(RBumper,sed odio morbi,copilot)
+coop:button(LBumper,nascetur ridiculus mus,copilot)
+coop:button(RTrigger,dui accumsan sit,copilot)
+
+coop:button(RJoystick,curabitur vitae nunc,copilot)
+
+
+
