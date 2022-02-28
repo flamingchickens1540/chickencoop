@@ -59,4 +59,4 @@ Can be either `pilot` or `copilot`. `pilot` is the top controller in the diagram
 
 ## Example
 
-See https://github.com/flamingchickens1540/chickencoop/blob/main/example.pdf and https://github.com/flamingchickens1540/chickencoop/blob/main/example.txt
+See the [example input](example.txt) and [its output](example.pdf)
