@@ -13,7 +13,7 @@ const yargs = require('yargs');
 
 const argv = yargs
                 .scriptName("npx chickencoop")
-                .usage('$0 -i /path/to/input -o /path/to/output.pdf')
+                .usage('$0 [--error-on-warnings] -i /path/to/input -o /path/to/output.pdf ')
                 .option('input', {
                     alias : 'i',
                     describe: 'The file to read from',
@@ -28,6 +28,11 @@ const argv = yargs
                     nargs: 1,
                     demand: true
                 })
+				.option('error', {
+					alias: 'error-on-warnings',
+					describe: 'Will cause the program to exit with error code 1 instead of giving a warning',
+					type: 'boolean'
+				})
                 .example("$0 -i input.txt -o output.pdf")
                 .showHelpOnFail(false, "Specify --help for available options")
                 .argv
@@ -88,12 +93,18 @@ class Button {
 		if (pilot) {
 			if (this.lock.pilot) {
 				console.warn(colors.yellow(`Binding for ${this.name} on Pilot has been registered twice!`))
+				if (argv.error) {
+					process.exit(1)
+				}
 				return true
 			}
 			this.lock.pilot = true
 		} else {
 			if (this.lock.copilot) {
 				console.warn(colors.yellow(`Binding for ${this.name} on Copilot has been registered twice!`))
+				if (argv.error) {
+					process.exit(1)
+				}
 				return true
 			} else {
 				this.lock.copilot = true
@@ -181,6 +192,9 @@ class CoopMatch {
 	public draw():void {
 		if (!this.button) {
 			console.error(colors.yellow("Could not find button '%s'"), this.buttonName)
+			if (argv.error) {
+				process.exit(1)
+			}
 		} else {
 			this.button.draw(this.label, this.pilot)
 		}
